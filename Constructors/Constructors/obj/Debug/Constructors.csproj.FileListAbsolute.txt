@@ -1,0 +1,5 @@
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\Constructors\Constructors\bin\Debug\Constructors.exe.config
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\Constructors\Constructors\bin\Debug\Constructors.exe
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\Constructors\Constructors\bin\Debug\Constructors.pdb
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\Constructors\Constructors\obj\Debug\Constructors.exe
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\Constructors\Constructors\obj\Debug\Constructors.pdb

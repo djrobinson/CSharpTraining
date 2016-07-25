@@ -1,0 +1,5 @@
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\VariablesDemo\VariablesDemo\bin\Debug\VariablesDemo.exe.config
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\VariablesDemo\VariablesDemo\bin\Debug\VariablesDemo.exe
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\VariablesDemo\VariablesDemo\bin\Debug\VariablesDemo.pdb
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\VariablesDemo\VariablesDemo\obj\Debug\VariablesDemo.exe
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\VariablesDemo\VariablesDemo\obj\Debug\VariablesDemo.pdb

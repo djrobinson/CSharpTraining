@@ -1,0 +1,5 @@
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\constantsDemo\constantsDemo\bin\Debug\constantsDemo.exe.config
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\constantsDemo\constantsDemo\bin\Debug\constantsDemo.exe
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\constantsDemo\constantsDemo\bin\Debug\constantsDemo.pdb
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\constantsDemo\constantsDemo\obj\Debug\constantsDemo.exe
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\constantsDemo\constantsDemo\obj\Debug\constantsDemo.pdb

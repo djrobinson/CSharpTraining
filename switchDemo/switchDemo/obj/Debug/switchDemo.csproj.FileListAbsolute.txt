@@ -1,0 +1,6 @@
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\switchDemo\switchDemo\bin\Debug\switchDemo.exe.config
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\switchDemo\switchDemo\bin\Debug\switchDemo.exe
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\switchDemo\switchDemo\bin\Debug\switchDemo.pdb
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\switchDemo\switchDemo\obj\Debug\switchDemo.csprojResolveAssemblyReference.cache
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\switchDemo\switchDemo\obj\Debug\switchDemo.exe
+C:\Users\drobinson\Documents\Visual Studio 2015\Projects\Training\switchDemo\switchDemo\obj\Debug\switchDemo.pdb
