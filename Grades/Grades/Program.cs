@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Speech.Synthesis;
+using System.IO;
 
 namespace Grades
 {
@@ -15,13 +16,28 @@ namespace Grades
             //synth.Speak("Testing");
             GradeBook book = new GradeBook();
 
-            //book.NameChanged = new NameChangedDelegate(OnNameChanged);
 
-            book.AddGrade(91);
-            book.AddGrade(89.4f);
-            book.AddGrade(75);
 
-            book.WriteGrades(Console.Out);
+            try
+            {
+                Console.WriteLine("Enter a name");
+                book.Name = Console.ReadLine();
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("Something went wrong");
+            }
+
+            book.NameChanged = new NameChangedDelegate(OnNameChanged);
+            AddGrades(book);
+
+            StreamWriter outputFile = File.CreateText("grades.txt");
+            book.WriteGrades(outputFile);
+            outputFile.Close();
 
             GradeStatistics stats = book.ComputeStatistics();
 
@@ -30,6 +46,13 @@ namespace Grades
             WriteResult("Highest", stats.HighestGrade);
             WriteResult("Letter Grade", stats.LetterGrade);
 
+        }
+
+        private static void AddGrades(GradeBook book)
+        {
+            book.AddGrade(91);
+            book.AddGrade(89.4f);
+            book.AddGrade(75);
         }
 
         static void OnNameChanged(object sender, NameChangedEventArgs args)

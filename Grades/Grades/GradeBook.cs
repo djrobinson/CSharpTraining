@@ -11,7 +11,7 @@ namespace Grades
     {
         public GradeBook()
         {
-            _name = "Empty";
+            _name = "Not Assigned";
             grades = new List<float>();
         }
 
@@ -54,18 +54,22 @@ namespace Grades
 
             set
             {
-                if(!String.IsNullOrEmpty(value))
+                if(string.IsNullOrEmpty( value ))
                 {
-                    if (_name != value)
-                    {
-                        NameChangedEventArgs args = new NameChangedEventArgs();
-                        args.ExistingName = _name;
-                        args.NewName = value;
-                        NameChanged(this, args);
-                    }
-                    _name = value;
+                    throw new ArgumentException("Name cannot be null or empty");
                 }
+                
+                if (_name != value)
+                {
+                    NameChangedEventArgs args = new NameChangedEventArgs();
+                    args.ExistingName = _name;
+                    args.NewName = value;
+                    NameChanged(this, args);
+                }
+                _name = value;
+
             }
+            
         }
 
         //Registering the delegate here, will then 
