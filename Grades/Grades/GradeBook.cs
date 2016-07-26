@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace Grades
     {
         public GradeBook()
         {
+            _name = "Empty";
             grades = new List<float>();
         }
 
@@ -29,11 +31,47 @@ namespace Grades
             return stats;
         }
 
+        internal void WriteGrades(TextWriter destination)
+        {
+            for (int i = 0; i < grades.Count; i++)
+            {
+                destination.WriteLine(grades[i]);
+            }
+        }
+
         public void AddGrade(float grade)
         {
                 grades.Add(grade);
         }
 
+        public string Name
+        {
+            get
+            {
+
+                return _name;
+            }
+
+            set
+            {
+                if(!String.IsNullOrEmpty(value))
+                {
+                    if (_name != value)
+                    {
+                        NameChangedEventArgs args = new NameChangedEventArgs();
+                        args.ExistingName = _name;
+                        args.NewName = value;
+                        NameChanged(this, args);
+                    }
+                    _name = value;
+                }
+            }
+        }
+
+        //Registering the delegate here, will then 
+        public NameChangedDelegate NameChanged;
+
+        private string _name;
         private List<float> grades;
     }
 }
