@@ -24,5 +24,31 @@ namespace EqualityPractice
         {
             return _name;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+            if (ReferenceEquals(obj, this))
+                return true;
+            if (obj.GetType() != this.GetType())
+                return false;
+            Food rhs = obj as Food;
+            return this._name == rhs._name && this._group == rhs._group;
+        }
+
+        public override int GetHashCode()
+        {
+            return this._name.GetHashCode() ^ this._group.GetHashCode();
+        }
+        public static bool operator ==( Food lhs, Food rhs)
+        {
+            return lhs.Equals(rhs);
+        }
+
+        public static bool operator !=(Food lhs, Food rhs)
+        {
+            return !lhs.Equals(rhs);
+        }
     }
 }
