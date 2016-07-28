@@ -8,9 +8,18 @@ namespace ACM.BL
 {
     public class CustomerRepository
     {
-        Customer customer = new Customer(1);
+        private AddressRepository addressRepository { get; set; }
+
+        public CustomerRepository()
+        {
+            addressRepository = new AddressRepository();
+        }
+        
         public Customer Retrieve(int customerId)
         {
+            Customer customer = new Customer(customerId);
+            customer.AddressList = addressRepository.RetrieveByCustomerId(customerId).ToList();
+
             if (customerId == 1)
             {
                 customer.EmailAddress = "FrodoBags@gmail.com";

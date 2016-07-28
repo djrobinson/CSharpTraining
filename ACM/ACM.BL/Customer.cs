@@ -9,14 +9,18 @@ namespace ACM.BL
     public class Customer
     {
         public Customer()
+            : this(0)
         {
-
+            
         }
 
         public Customer(int customerId)
         {
             this.CustomerId = customerId;
+            AddressList = new List<Address>();
         }
+
+        public List<Address> AddressList { get; set; }
         public static int instanceCount { get; set; }
         private string _lastName;
 
@@ -52,20 +56,6 @@ namespace ACM.BL
             }
         }
 
-        public Customer Retrieve(int customerId)
-        {
-            return new Customer();
-        }
-
-        public List<Customer> Retrieve()
-        {
-            return new List<Customer>();
-        }
-
-        public bool Save()
-        {
-            return true;    
-        }
         public bool Validate()
         {
             var isValid = true;
