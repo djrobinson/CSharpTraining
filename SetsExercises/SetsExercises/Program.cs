@@ -25,7 +25,7 @@ namespace SetsExercises
 
             //UnionWith, IntersectWith, etc
             bigCities.UnionWith(citiesInWorld);
-            
+            //Can also test value equality of the whole set using SetEquals
             foreach (string city in bigCities)
                 Console.WriteLine(city);
 
