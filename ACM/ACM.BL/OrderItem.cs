@@ -18,7 +18,7 @@ namespace ACM.BL
         }
 
         public int OrderItemId { get; private set; }
-        public string ProductId { get; set; }
+        public int ProductId { get; set; }
         public int Quantity { get; set; }
         public decimal? PurchasePrice { get; set; }
 
