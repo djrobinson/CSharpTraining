@@ -24,7 +24,35 @@ namespace LinkedListsStacksQueues
             //foreach (string president in presidents)
             //    Console.WriteLine(president);
 
-            Stack<string>
+            //Stack<string> books = new Stack<string>();
+
+            //books.Push("Crime and Punishment");
+            //books.Push("The Idiot");
+            //books.Push("Notes from the Underground");
+
+            //Console.WriteLine("All Books: ");
+            //foreach (string title in books)
+            //    Console.WriteLine(title);
+
+            //books.Pop();
+
+            //foreach (string title in books)
+            //    Console.WriteLine(title);
+
+            Queue<string> tasks = new Queue<string>();
+
+            tasks.Enqueue("Go home");
+            tasks.Enqueue("Fall asleep");
+            tasks.Enqueue("Have Nightmares");
+
+            Console.WriteLine("All Tasks:");
+            foreach (string title in tasks)
+                Console.WriteLine(title);
+
+            string nextTask = tasks.Dequeue();
+
+            foreach (string title in tasks)
+                Console.WriteLine(title);
         }
     }
 }
