@@ -51,18 +51,22 @@ namespace BasicArrayOps
             Console.WriteLine("Count = "+presidents.Count);
             Console.WriteLine("Capacity = "+ presidents.Capacity);
             presidents.Add("Barack Obama");
-            presidents.Add("Barack Obama2");
-            presidents.Add("Barack Obama3");
-            //Doubles the capacity when it goes over size
-            presidents.Add("Barack Obama4");
-            presidents.Add("Barack Obama5");
 
-            Console.WriteLine("Count = " + presidents.Count);
-            Console.WriteLine("Capacity = " + presidents.Capacity);
+
             foreach (string president in presidents)
                 Console.WriteLine(president);
-            
 
+            //List<T> is Lightweight & Efficient but not customizable
+            //Collection<T> not as efficient, but has virtual methods that can be customized
+
+            NonBlankStringList lst = new NonBlankStringList();
+            lst.Add("Added an item");
+            lst[0] = "Changed item";
+            lst.Add("second item");
+            lst.Add("  ");
+
+            foreach(string item in lst)
+                Console.WriteLine(item);
 
 
         }
