@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using MvcMovie2.Data;
 using MvcMovie2.Models;
 using MvcMovie2.Services;
+using MvcMovie.Models;
 
 namespace MvcMovie2
 {
@@ -92,6 +93,8 @@ namespace MvcMovie2
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            SeedData.Initialize(app.ApplicationServices);
         }
     }
 }
