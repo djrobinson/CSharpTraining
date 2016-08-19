@@ -10,28 +10,30 @@ namespace DataTypeProblems
     {
         static void Main(string[] args)
         {
-            int attempts = 0;
-            string username = "Danny";
-            string password = "password";
+            int firstNumber;
+            int secondNumber;
+            string operation;
+            int answer;
 
-            do
+            Console.WriteLine("Enter first number: ");
+            firstNumber = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Input operation: ");
+            operation = Console.ReadLine();
+
+            Console.WriteLine("Enter second number: ");
+            secondNumber = Int32.Parse(Console.ReadLine());
+
+            if (operation == "+")
             {
-                Console.WriteLine("Username: ");
-                string usernameAttempt = Console.ReadLine();
-                Console.WriteLine("Password: ");
-                string passwordAttempt = Console.ReadLine();
-
-                if (username != usernameAttempt || password != passwordAttempt)
-                {
-                    attempts++;
-                }
-                else
-                {
-                    Console.WriteLine("You're logged in-ish");
-                    attempts = 3;
-                }
-
-            } while (attempts < 3);
+                answer = firstNumber + secondNumber;
+                Console.WriteLine(answer);
+            }
+            else if (operation == "-")
+            {
+                answer = firstNumber - secondNumber;
+                Console.WriteLine(answer);
+            }
 
         }
     }
