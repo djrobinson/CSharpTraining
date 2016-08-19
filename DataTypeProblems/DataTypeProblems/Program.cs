@@ -10,31 +10,25 @@ namespace DataTypeProblems
     {
         static void Main(string[] args)
         {
-            int firstNumber;
-            int secondNumber;
-            string operation;
-            int answer;
+            string sentence;
 
-            Console.WriteLine("Enter first number: ");
-            firstNumber = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter a sentence: ");
+            sentence = Console.ReadLine();
+            CountSpace(sentence);
 
-            Console.WriteLine("Input operation: ");
-            operation = Console.ReadLine();
+        }
 
-            Console.WriteLine("Enter second number: ");
-            secondNumber = Int32.Parse(Console.ReadLine());
-
-            if (operation == "+")
+        static void CountSpace(string sentence)
+        {
+            int spaceCount = 0;
+            foreach (char c in sentence)
             {
-                answer = firstNumber + secondNumber;
-                Console.WriteLine(answer);
+                if (Char.IsWhiteSpace(c))
+                {
+                    spaceCount++;
+                }
             }
-            else if (operation == "-")
-            {
-                answer = firstNumber - secondNumber;
-                Console.WriteLine(answer);
-            }
-
+            Console.WriteLine(spaceCount);
         }
     }
 }
