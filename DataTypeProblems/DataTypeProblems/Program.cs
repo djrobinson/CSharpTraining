@@ -10,25 +10,29 @@ namespace DataTypeProblems
     {
         static void Main(string[] args)
         {
-            string sentence;
+            ArrayList numbers = new ArrayList();
 
-            Console.WriteLine("Enter a sentence: ");
-            sentence = Console.ReadLine();
-            CountSpace(sentence);
+            for (var i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Enter number {0}: ", i);
+                var num = Int32.Parse(Console.ReadLine());
+                numbers.Add(num);
+            }
+
+            CalculateTotal(numbers);
+            
 
         }
 
-        static void CountSpace(string sentence)
+        static int CalculateTotal(ArrayList numbers)
         {
-            int spaceCount = 0;
-            foreach (char c in sentence)
-            {
-                if (Char.IsWhiteSpace(c))
-                {
-                    spaceCount++;
-                }
-            }
-            Console.WriteLine(spaceCount);
+            var total = 0;
+           foreach(int num in numbers)
+           {
+                total += num;
+           }
+            Console.WriteLine(total);
+            return total;
         }
     }
 }
